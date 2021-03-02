@@ -13,10 +13,22 @@ const Posts = () => {
     fetchPosts();
   }, []);
 
+
+  const POSTS = items.map((item, index) => (
+    <div key={index}>
+      <p>{posts.headline}</p>
+      <p>{posts.author}</p>
+      <p>{posts.content}</p>
+      <img className="post-image" src={posts.imgURL} alt={post image} />
+      <input type="button" value="up" />
+      <input type="button" value="down" id={index} onClick={handleDown} />
+    </div>
+  ));
+
   return (
     <div className="posts-list">
       <h2 className="posts-list-title">Posts</h2>
-      <div className="posts">{posts}</div>
+      <div className="posts">{POSTS}</div>
     </div>
   );
 };
