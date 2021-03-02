@@ -15,7 +15,7 @@ const Posts = () => {
 
   return (
     <div className="posts-list">
-      <h1 className="posts-list-title">Posts</h1>
+      <h2 className="posts-list-title">Posts</h2>
       <div className="posts">{posts}</div>
     </div>
   );
