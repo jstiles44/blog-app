@@ -1,6 +1,7 @@
 import './Posts.css';
 import { useState, useEffect } from "react";
 import { getPosts } from "../../services/posts";
+import {Link} from "react-router-dom"
 
 const Posts = () => {
   const [posts, setPosts] = useState([]);
@@ -14,8 +15,9 @@ const Posts = () => {
   }, []);
 
 
-  const POSTS = items.map((item, index) => (
-    <div key={index}>
+  const POSTS = items.map((post) => (
+    <Link key={post.id} to={`/post/${post.id}`}>
+      <div className='homeScreenPosts'key={post.id}>
       <p>{posts.headline}</p>
       <p>{posts.author}</p>
       <p>{posts.content}</p>
@@ -23,6 +25,7 @@ const Posts = () => {
       <input type="button" value="up" />
       <input type="button" value="down" id={index} onClick={handleDown} />
     </div>
+    </Link> 
   ));
 
   return (
