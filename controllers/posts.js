@@ -1,3 +1,4 @@
+
 const Post = require('../models/post')
 const db = require('../db/connection')
 
@@ -69,3 +70,7 @@ module.exports = {
     updatePost,
     deletePost
 }
+
+const Post = require('../models/product')
+const db= require('../db/connection')
+
