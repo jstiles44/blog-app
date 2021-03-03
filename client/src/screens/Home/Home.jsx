@@ -1,10 +1,16 @@
-import React from 'react';
+import "./Home.css";
+import Layout from "../../components/shared/Layout/Layout";
+import Posts from "../../components/Posts/Posts";
 
 const Home = () => {
   return (
-    <div>
-      
-    </div>
+    <Layout>
+      <div>
+        <div className="home">
+          <Posts />
+        </div>
+      </div>
+    </Layout>
   );
 };
 
