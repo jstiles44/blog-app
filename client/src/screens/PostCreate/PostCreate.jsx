@@ -13,10 +13,10 @@ const postCreate = (props) => {
   });
 
   const handleChange = (event) => {
-    const { headline, value } = event.target;
-    setProduct({
-      ...product,
-      [headline]: value,
+    const { name, value } = event.target;
+    setPost({
+      ...post,
+      [name]: value,
     });
   };
 
