@@ -1,6 +1,7 @@
 import { Redirect } from "react-router-dom";
 import Layout from "../../components/shared/Layout/Layout";
-import { postPost } from "../../services/posts";
+
+import { createPost } from "../../services/posts";
 import { useState } from "react";
 
 const PostCreate = (props) => {
@@ -22,7 +23,7 @@ const PostCreate = (props) => {
 
   const handleSubmit = async (event) => {
     event.preventDefault();
-    const created = await postPost(post);
+    const created = await createPost(post);
     setCreated({ created });
   };
 
