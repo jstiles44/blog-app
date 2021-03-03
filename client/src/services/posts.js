@@ -1,0 +1,49 @@
+import axios from "axios";
+
+const apiUrl = `https://lymewyre.herokuapp.com/`;
+
+export const getPosts = async () => {
+  try {
+    const response = await axios(`${apiUrl}/posts`);
+    const posts = response.data;
+    return posts;
+  } catch (error) {
+    throw error;
+  }
+};
+export const getPosts = async (id) => {
+  try {
+    const response = await axios(`${apiUrl}/posts/${id}`);
+    const posts = response.data;
+    return posts;
+  } catch (error) {
+    throw error;
+  }
+};
+
+export const postPost = async (post) => {
+  try {
+    const response = await axios.post(`${apiUrl}/`, post);
+    return response.data;
+  } catch (error) {
+    throw error;
+  }
+};
+
+export const updatePost = async (id, post) => {
+  try {
+    const response = await axios.put(`${apiUrl}/posts/${id}`, post);
+    return response.data;
+  } catch (error) {
+    throw error;
+  }
+};
+
+export const deletePost = async (id) => {
+  try {
+    const response = await axios.delete(`${apiUrl}/posts/${id}`);
+    return response.data;
+  } catch (error) {
+    throw error;
+  }
+};
