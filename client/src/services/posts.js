@@ -1,6 +1,6 @@
 import axios from "axios";
 
-const apiUrl = `https://lymewyre.herokuapp.com/`;
+const apiUrl = `https://lymewyre.herokuapp.com/api`;
 
 export const getPosts = async () => {
   try {

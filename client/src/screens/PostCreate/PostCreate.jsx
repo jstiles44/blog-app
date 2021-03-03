@@ -1,9 +1,9 @@
 import { Redirect } from "react-router-dom";
-import Nav from "../../components/Nav";
+import Layout from "../../components/shared/Layout/Layout";
 import { postPost } from "../../services/posts";
 import { useState } from "react";
 
-const postCreate = (props) => {
+const PostCreate = (props) => {
   const [isCreated, setCreated] = useState(false);
   const [post, setPost] = useState({
     headline: "",
@@ -31,7 +31,8 @@ const postCreate = (props) => {
   }
 
   return (
-    <Nav>
+    <Layout>
+      <h1>add a review</h1>
       <form className="create-form" onSubmit={handleSubmit}>
         <input
           className="input-headline"
@@ -67,8 +68,11 @@ const postCreate = (props) => {
           required
           onChange={handleChange}
         />
+        <button type="submit" className="submit-button">
+          Submit
+        </button>
       </form>
-    </Nav>
+    </Layout>
   );
 };
-export default postCreate;
+export default PostCreate;
