@@ -21,9 +21,12 @@ export const getPost = async (id) => {
   }
 };
 
+
+
 export const createPost = async (post) => {
   try {
     const response = await axios.post(`${apiUrl}/posts`, post);
+
     return response.data;
   } catch (error) {
     throw error;

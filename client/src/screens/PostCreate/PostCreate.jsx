@@ -1,5 +1,6 @@
 import { Redirect } from "react-router-dom";
 import Layout from "../../components/shared/Layout/Layout";
+
 import { createPost } from "../../services/posts";
 import { useState } from "react";
 
