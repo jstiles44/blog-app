@@ -14,16 +14,19 @@ const Posts = () => {
     fetchPosts();
   }, []);
 
-  const POSTS = items.map((post) => (
-    <Link key={post.id} to={`/post/${post.id}`}>
-      <div className="homeScreenPosts" key={post.id}>
-        <p>{posts.headline}</p>
-        <p>{posts.author}</p>
-        <p>{posts.content}</p>
-        <img className="post-image" src={posts.imgURL} alt={"post image"} />
+  console.log(posts)
+
+  const POSTS = posts.map((post,index) => (
+    <Link key={index} to={`/post/${post.id}`}>
+      <div className="homeScreenPosts">
+        <p>{post.headline}</p>
+        <p>{post.author}</p>
+        <img className="post-image" src={post.imgURL} alt={"post"} />
       </div>
     </Link>
   ));
+
+  // console.log(POSTS)
 
   return (
     <div className="posts-list">
