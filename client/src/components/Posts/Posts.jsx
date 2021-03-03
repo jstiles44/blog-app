@@ -12,7 +12,7 @@ const Posts = () => {
       setPosts(resp);
     };
     fetchPosts();
-  }, []);
+  }, [posts]);
 
   // console.log(posts)
 
