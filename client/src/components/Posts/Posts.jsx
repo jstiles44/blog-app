@@ -21,8 +21,6 @@ const Posts = () => {
         <p>{posts.author}</p>
         <p>{posts.content}</p>
         <img className="post-image" src={posts.imgURL} alt={"post image"} />
-        <input type="button" value="up" />
-        <input type="button" value="down" id={index} onClick={handleDown} />
       </div>
     </Link>
   ));
