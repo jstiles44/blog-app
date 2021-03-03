@@ -14,10 +14,10 @@ const Posts = () => {
     fetchPosts();
   }, []);
 
-  console.log(posts)
+  // console.log(posts)
 
   const POSTS = posts.map((post,index) => (
-    <Link key={index} to={`/post/${post.id}`}>
+    <Link key={index} to={`/posts/${post._id}`}>
       <div className="homeScreenPosts">
         <p>{post.headline}</p>
         <p>{post.author}</p>
