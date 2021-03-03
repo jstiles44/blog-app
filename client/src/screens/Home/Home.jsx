@@ -1,14 +1,16 @@
 import "./Home.css";
-import Nav from "../../components/Nav";
+import Layout from "../../components/shared/Layout/Layout";
 import Posts from "../../components/Posts/Posts";
 
 const Home = () => {
   return (
-    <Nav>
-      <div className="home">
-        <Posts />
+    <Layout>
+      <div>
+        <div className="home">
+          <Posts />
+        </div>
       </div>
-    </Nav>
+    </Layout>
   );
 };
 
