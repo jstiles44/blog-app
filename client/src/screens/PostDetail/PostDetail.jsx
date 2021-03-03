@@ -1,13 +1,14 @@
 import React from 'react';
 import { useState, useEffect } from 'react';
 import Layout from '../../components/shared/Layout/Layout';
-import { useParams, Link } from 'react-router-dom';
+import { useParams, Link, Redirect } from 'react-router-dom';
 import { getPost, deletePost} from '../../services/posts.js'
 
 const PostDetail = (props) => {
 
   const [post, setPost] = useState(null);
   const [isLoaded, setLoaded] = useState(false);
+  const [isDeleted, setDeleted] = useState(false);
   const { id } = useParams();
 
   useEffect(() => {
@@ -22,7 +23,17 @@ const PostDetail = (props) => {
   if (!isLoaded) {
     return <h1> Loading ... </h1>
   }
+  const handleDelete = (id) => {
+    deletePost(id);
+    setDeleted(true);
+  
+  }
 
+  if (isDeleted) {
+    return <Redirect to={`/`} />;
+  }
+
+  
   return (
     <div>
       <Layout>
@@ -34,8 +45,8 @@ const PostDetail = (props) => {
             <div className='content'>{post.content}</div>
 
             <div className='buttons'>
-              <button className='edit'> <Link className='edit-link' to={`/posts/edit/${post.id}`}>Edit </Link></button>
-              <button className='delete' onClick={() => deletePost(post.id)}> Delete </button>
+              <button className='edit'> <Link className='edit-link' to={`/posts/edit/${post._id}`}>Edit </Link></button>
+              <button className='delete' onClick={() => handleDelete(post._id)}> Delete </button>
             </div>
           </div>
         </div>
