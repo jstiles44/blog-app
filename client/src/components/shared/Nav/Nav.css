@@ -33,6 +33,11 @@ nav {
   filter: drop-shadow(1px 1px 2px grey)
 }
 
+.kiwi:hover {
+  transform: rotate(1.0turn);
+  transition: 1s
+}
+
 .logo-container {
   display: flex;
   align-items: center;

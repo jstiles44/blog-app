@@ -2,7 +2,8 @@ import React from 'react';
 import { useState, useEffect } from 'react';
 import Layout from '../../components/shared/Layout/Layout';
 import { useParams, Link, Redirect } from 'react-router-dom';
-import { getPost, deletePost} from '../../services/posts.js'
+import { getPost, deletePost } from '../../services/posts.js'
+import "./PostDetail.css"
 
 const PostDetail = (props) => {
 
@@ -38,6 +39,7 @@ const PostDetail = (props) => {
     <div>
       <Layout>
         <div className='post-detail'>
+          <div className='blog-box'>
           <img className='detail-image' src={post.imgURL} alt={post.headline} />
           <div className='details'>
             <div className='title'> {post.headline}</div>
@@ -48,7 +50,8 @@ const PostDetail = (props) => {
               <button className='edit'> <Link className='edit-link' to={`/posts/edit/${post._id}`}>Edit </Link></button>
               <button className='delete' onClick={() => handleDelete(post._id)}> Delete </button>
             </div>
-          </div>
+            </div>
+            </div> 
         </div>
       </Layout>
     </div>

@@ -20,7 +20,7 @@ const Posts = () => {
     <Link key={index} to={`/posts/${post._id}`}>
       <div className="homeScreenPosts">
         <div className="headline">{post.headline}</div>
-        <div className="author">{post.author}</div>
+        <div className="author-home">{post.author}</div>
           <div className="image-container">
           <img className="post-image" src={post.imgURL} alt={"post"} />
           </div>
