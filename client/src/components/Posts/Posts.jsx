@@ -21,7 +21,9 @@ const Posts = () => {
       <div className="homeScreenPosts">
         <div className="headline">{post.headline}</div>
         <div className="author">{post.author}</div>
-        <img className="post-image" src={post.imgURL} alt={"post"} />
+          <div className="image-container">
+          <img className="post-image" src={post.imgURL} alt={"post"} />
+          </div>
       </div>
     </Link>
   ));

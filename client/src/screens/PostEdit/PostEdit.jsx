@@ -70,11 +70,12 @@ const PostEdit = (props) => {
               onChange={handleChange} />
             <input 
               className='input-headline'
-              placeholder='Headline:'
+              placeholder='Headline (max-length: 90 characters)'
               value={post.headline}
               name='headline'
               required
-              onChange={handleChange} />
+              onChange={handleChange}
+            maxlength="90"/>
             <textarea
               className='textarea-content'
               rows={20}
