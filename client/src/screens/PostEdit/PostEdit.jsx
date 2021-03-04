@@ -1,7 +1,8 @@
 import { useState, useEffect } from 'react';
 import { useParams, Redirect } from 'react-router-dom';
 import Layout from '../../components/shared/Layout/Layout'; 
-import { getPost, updatePost} from '../../services/posts.js'
+import { getPost, updatePost } from '../../services/posts.js';
+import "./PostEdit.css"
 
 
 const PostEdit = (props) => {
@@ -47,16 +48,17 @@ const PostEdit = (props) => {
     <div>
       <Layout>
         <div className='product-edit'>
+          <div className="edit-container">
           <div className='image-container'>
             <img className='edit-image' src={post.imgURL} alt={post.name} />
 
-            <form onSubmit={handleSubmit}>
+              <form onSubmit={handleSubmit}>
               <input className='edit-image-link'
                 placeholder='Image Link'
                 value={post.imgURL}
                 name='imgURL'
                 required
-                onChange={handleChange}/>
+                    onChange={handleChange} />
             </form>
           </div>
 
@@ -87,7 +89,8 @@ const PostEdit = (props) => {
               onChange={handleChange} />
             
             <button type='submit' className='change-button'> Update</button>
-          </form>
+            </form>
+            </div>
         </div>
       </Layout>
       

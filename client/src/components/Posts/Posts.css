@@ -12,6 +12,11 @@
   border-radius: 5px;
 }
 
+.homeScreenPosts:hover {
+  transform: scale(1.03);
+  box-shadow: 0 0 3px darkgrey;
+}
+
 .post-image {
  
   width: 100px;

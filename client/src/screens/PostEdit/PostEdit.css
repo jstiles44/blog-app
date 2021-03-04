@@ -1,0 +1,31 @@
+.product-edit {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.edit-container {
+  border: 2px solid green;
+  display: flex;
+  flex-direction: column;
+}
+
+.image-container {
+  width: 400px;
+  
+}
+
+.edit-image {
+  max-height: 400px;
+  width: 400px;
+  object-fit: cover;
+  
+}
+
+.edit-form {
+  width: 400px;
+}
+
+.text-area {
+  width: 100%;
+}
