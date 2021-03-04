@@ -1,0 +1,27 @@
+.post-image {
+  height: 100px;
+}
+
+.homeScreenPosts {
+  margin: 10px;
+  display: grid;
+  grid-template-areas: 
+  "i h h h"
+  "i h h h"
+  "i a a a";
+}
+
+.post-image {
+  grid-area: i;
+  border: 2px solid red;
+}
+
+.headline {
+  grid-area: h;
+  border: 2px solid red;
+}
+
+.author {
+  grid-area: a;
+  border: 2px solid red;
+}

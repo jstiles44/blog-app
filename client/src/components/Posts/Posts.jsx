@@ -19,8 +19,8 @@ const Posts = () => {
   const POSTS = posts.map((post,index) => (
     <Link key={index} to={`/posts/${post._id}`}>
       <div className="homeScreenPosts">
-        <p>{post.headline}</p>
-        <p>{post.author}</p>
+        <div className="headline">{post.headline}</div>
+        <div className="author">{post.author}</div>
         <img className="post-image" src={post.imgURL} alt={"post"} />
       </div>
     </Link>
@@ -30,7 +30,6 @@ const Posts = () => {
 
   return (
     <div className="posts-list">
-      <h2 className="posts-list-title">Posts</h2>
       <div className="posts">{POSTS}</div>
     </div>
   );
