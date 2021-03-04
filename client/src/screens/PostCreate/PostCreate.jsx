@@ -10,7 +10,7 @@ const PostCreate = (props) => {
     headline: "",
     content: "",
     author: "",
-    imgURL: "",
+    imgURL: "https://i.ibb.co/cL8wtdc/kiwi-slice.png",
   });
 
   const handleChange = (event) => {
@@ -37,12 +37,13 @@ const PostCreate = (props) => {
       <form className="create-form" onSubmit={handleSubmit}>
         <input
           className="input-headline"
-          placeholder="Headline"
+          placeholder="Headline (max-length: 90 characters)"
           value={post.headline}
           name="headline"
           required
           autoFocus
           onChange={handleChange}
+          maxlength="90"
         />
         <input
           className="input-author"
