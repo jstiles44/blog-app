@@ -1,0 +1,55 @@
+.create-form {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-top: 50px;
+  border: 2px solid green;
+  border-radius: 5px;
+  width: 400px;
+  padding-top: 20px;
+  padding-bottom: 10px;
+}
+
+.add-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.input-author {
+  width: 340px;
+  border-radius: 5px;
+}
+
+.input-imgURL {
+  width: 340px;
+  margin-top: 10px;
+  margin-bottom: 10px;
+  border-radius: 5px;
+}
+
+.textarea-content{
+  width: 340px;
+  margin-bottom: 10px;
+  border-radius: 5px;
+}
+
+.submit-button {
+  font-family: 'DotGothic16', sans-serif;
+  background: transparent;
+  margin: 5px;
+  border-radius: 5px;
+  width: 60px;
+  transition: 0.5s;
+}
+
+.submit-button:hover {
+  background-color: yellowgreen;
+  transition: 0.5s;
+}
+
+.input-headline-add {
+  margin-bottom: 10px;
+  border-radius: 5px;
+  width: 340px;
+}

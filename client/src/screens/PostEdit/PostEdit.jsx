@@ -81,7 +81,7 @@ const PostEdit = (props) => {
             <textarea
               className='textarea-content'
               rows={20}
-              cols={40}
+              cols={41}
               placeholder='Enter Content'
               value={post.content}
               name='content'
