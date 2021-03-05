@@ -8,10 +8,15 @@
   border: 2px solid green;
   display: flex;
   flex-direction: column;
+  margin-top: 50px;
+  border-radius: 5px;
 }
 
 .image-container {
   width: 400px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
   
 }
 
@@ -19,13 +24,52 @@
   max-height: 400px;
   width: 400px;
   object-fit: cover;
-  
+  border-bottom: 2px solid green;
 }
 
 .edit-form {
   width: 400px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
 
 .text-area {
-  width: 100%;
+  width: 340px;
+  margin-top: 5px;
+  border-radius: 5px;
+}
+
+.change-button {
+  align-self: center;
+  font-family: 'DotGothic16', sans-serif;
+  background: transparent;
+  margin: 5px;
+  border-radius: 5px;
+  width: 60px;
+  transition: 0.5s;
+}
+
+.change-button:hover {
+  background-color: yellowgreen;
+  transition: 0.5s;
+}
+
+.edit-image-link {
+  width: 340px;
+  margin-top: 20px;
+  border-radius: 5px;
+}
+
+.input-name {
+  width: 340px;
+  margin-top: 5px;
+  border-radius: 5px;
+}
+
+.input-headline {
+  width: 340px;
+  margin-top: 5px;
+  margin-bottom: 5px;
+  border-radius: 5px;
 }

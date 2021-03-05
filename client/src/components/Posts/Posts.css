@@ -28,7 +28,7 @@
 }
 
 
-.headline {
+.headline-home {
   grid-area: h;
   display: flex;
   justify-content: flex-start;
@@ -54,7 +54,7 @@
   margin-left: 10px;
 }
 
-.image-container {
+.image-container-home {
   grid-area: i;
   width: 100px;
 }

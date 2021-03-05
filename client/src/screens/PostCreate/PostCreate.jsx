@@ -1,6 +1,6 @@
 import { Redirect } from "react-router-dom";
 import Layout from "../../components/shared/Layout/Layout";
-
+import "./PostCreate.css"
 import { createPost } from "../../services/posts";
 import { useState } from "react";
 
@@ -33,10 +33,10 @@ const PostCreate = (props) => {
 
   return (
     <Layout>
-      <h1>add a review</h1>
+      <div className="add-container">
       <form className="create-form" onSubmit={handleSubmit}>
         <input
-          className="input-headline"
+          className="input-headline-add"
           placeholder="Headline (max-length: 90 characters)"
           value={post.headline}
           name="headline"
@@ -53,6 +53,7 @@ const PostCreate = (props) => {
           required
           autoFocus
           onChange={handleChange}
+          maxlength="45"
         />
         <input
           className="input-imgURL"
@@ -73,7 +74,8 @@ const PostCreate = (props) => {
         <button type="submit" className="submit-button">
           Submit
         </button>
-      </form>
+        </form>
+        </div>
     </Layout>
   );
 };
